@@ -102,7 +102,9 @@ Reads the dns cache of the system like `ipconfig /displaydns` would. No network 
 
 - Random or common names for Named Pipes.
 - Just use the aggressor script to read from the Named Pipe (like here [repo](https://github.com/rxwx/cs-rdll-ipc-example)).
-- ...
+- Fix output of IPv6 AAAA Format
+- Using other communication methods like Mailslots
+- Compare result with `ipconfig /displaydns`
 
 # References
 
