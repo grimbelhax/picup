@@ -6,10 +6,6 @@ First, the aggressor script injects the shellcode with `shinject`. The shellcode
 
 Of course, the Beacon object files (BOFs) are suitable for this and also far better known and supported, but in my case I wanted to run my own shellcode to get better at C and to learn the concept of position independent code. Maybe there are even some situations where shellcode is the better choice. 
 
-There are some general advandatges from shellcode to BOFs like the indipendence from C2 (even most C2 have COFF-Loaders integrated) or run it in your own loader C2.
-
-
-
 # Usage
 
 ## How to compile
