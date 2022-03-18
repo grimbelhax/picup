@@ -96,15 +96,17 @@ beacon> picup dnscache
 
 Reads the dns cache of the system like `ipconfig /displaydns` would. No network calls are made since the [DnsQuery_W](https://docs.microsoft.com/en-us/windows/win32/api/windns/nf-windns-dnsquery_w) are executed with the query option [DNS_QUERY_NO_WIRE_QUERY](https://docs.microsoft.com/en-us/windows/win32/dns/dns-constants). Resolves DNS-Record to IP address if the entry exists.
 
-------------
 
-# Todo
+### Todo
 
 - Random or common names for Named Pipes.
 - Just use the aggressor script to read from the Named Pipe (like here [repo](https://github.com/rxwx/cs-rdll-ipc-example)).
 - Fix output of IPv6 AAAA Format
 - Using other communication methods like Mailslots
 - Compare result with `ipconfig /displaydns`
+
+
+------------
 
 # References
 
