@@ -104,6 +104,7 @@ Reads the dns cache of the system like `ipconfig /displaydns` would. No network 
 - Fix output of IPv6 AAAA Format
 - Using other communication methods like Mailslots
 - Compare result with `ipconfig /displaydns`
+- Better formatting of output
 
 
 ------------
