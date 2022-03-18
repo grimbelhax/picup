@@ -39,7 +39,7 @@ The BOF.
 # Clone the repository to your clients Cobalt Strike folder 
 git clone https://github.com/svnsyn/picup
 cd picup
-bash compile.sh
+bash compile.sh 
 ```
 
 ```
