@@ -4,7 +4,7 @@
 
 First, the aggressor script injects the shellcode with `shinject`. The shellcode than starts a Named Pipe to write its output to it. Than the BOF is loaded and conntects to the Named Pipe. There it reads all the data an print it to the console by using `BeaconPrintf`. 
 
-Of course, the Beacon object files (BOFs) are suitable for this and also far better known and supported, but in my case I wanted to run my own shellcode to get better at C and to learn the concept of position indipentend code. Maybe there are even some situations where shellcode is the better choice. 
+Of course, the Beacon object files (BOFs) are suitable for this and also far better known and supported, but in my case I wanted to run my own shellcode to get better at C and to learn the concept of position independent code. Maybe there are even some situations where shellcode is the better choice. 
 
 There are some general advandatges from shellcode to BOFs like the indipendence from C2 (even most C2 have COFF-Loaders integrated) or run it in your own loader C2.
 
@@ -116,7 +116,7 @@ Reads the dns cache of the system like `ipconfig /displaydns` would. No network 
 - [Beacon Object Files](https://hstechdocs.helpsystems.com/manuals/cobaltstrike/current/userguide/content/topics/beacon-object-files_main.htm)
 - [Aggressor Scripts](https://trial.cobaltstrike.com/aggressor-script/index.html).
 - [@csandker](https://twitter.com/0xcsandker): One of the best [blosposts](https://csandker.io/2021/01/10/Offensive-Windows-IPC-1-NamedPipes.html) about Named Pipes I was able to find (with security perspective). 
-- [@Bufflevoerflow](https://twitter.com/buffaloverflow): This [repo](https://github.com/rxwx/cs-rdll-ipc-example) was my foundation.
+- [@Buffleoverflow](https://twitter.com/buffaloverflow): This [repo](https://github.com/rxwx/cs-rdll-ipc-example) was my foundation.
 - [@MrUn1k0d3r](https://twitter.com/MrUn1k0d3r/): Really awesome [Patreon](https://www.patreon.com/MrUn1k0d3r). 
 - [@thefLink](https://github.com/codewhitesec/HandleKatz): On of the best sources for learning C (PIC-Style and in general) and I used `chkstk_ms.asm` from it. 
 - [React OS](https://reactos.org/): Implementation of [ipconfig](https://doxygen.reactos.org/d3/dae/ipconfig_8c_source.html)
