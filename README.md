@@ -92,16 +92,26 @@ beacon> picup dnscache
 
 Reads the dns cache of the system like `ipconfig /displaydns` would. No network calls are made since the [DnsQuery_W](https://docs.microsoft.com/en-us/windows/win32/api/windns/nf-windns-dnsquery_w) are executed with the query option [DNS_QUERY_NO_WIRE_QUERY](https://docs.microsoft.com/en-us/windows/win32/dns/dns-constants). Resolves DNS-Record to IP address if the entry exists.
 
+------------
+
+# Todo
+
+- Random or common names for Named Pipes.
+- Just use the aggressor script to read from the Named Pipe (like here [repo](https://github.com/rxwx/cs-rdll-ipc-example)).
+- ...
 
 # References
 
 
-- [@Hasherezade](https://twitter.com/hasherezade): For this [paper](https://vxug.fakedoma.in/papers/VXUG/Exclusive/FromaCprojectthroughassemblytoshellcodeHasherezade.pdf) 
-- [@ParanoidNinja](https://twitter.com/NinjaParanoid): For this [code](https://github.com/paranoidninja/PIC-Get-Privileges) and this [tutorial](https://bruteratel.com/research/feature-update/2021/01/30/OBJEXEC/). Took `adjuststack.asm` and `addresshunter.h` from it. 
+- [@Hasherezade](https://twitter.com/hasherezade): This [paper](https://vxug.fakedoma.in/papers/VXUG/Exclusive/FromaCprojectthroughassemblytoshellcodeHasherezade.pdf) 
+- [@ParanoidNinja](https://twitter.com/NinjaParanoid): This [code](https://github.com/paranoidninja/PIC-Get-Privileges) and this great [tutorial](https://bruteratel.com/research/feature-update/2021/01/30/OBJEXEC/): Used  `adjuststack.asm` and `addresshunter.h` from it. 
 - [Beacon Object Files](https://hstechdocs.helpsystems.com/manuals/cobaltstrike/current/userguide/content/topics/beacon-object-files_main.htm)
 - [Aggressor Scripts](https://trial.cobaltstrike.com/aggressor-script/index.html).
+- [@csandker](https://twitter.com/0xcsandker): One of the best [blosposts](https://csandker.io/2021/01/10/Offensive-Windows-IPC-1-NamedPipes.html) about Named Pipes I was able to find (with security perspective). 
+- [@Bufflevoerflow](https://twitter.com/buffaloverflow): This [repo](https://github.com/rxwx/cs-rdll-ipc-example) was my foundation.
 - [@MrUn1k0d3r](https://twitter.com/MrUn1k0d3r/): Really awesome [Patreon](https://www.patreon.com/MrUn1k0d3r). 
-- [@thefLink](https://github.com/codewhitesec/HandleKatz): Best source for learning C (PIC-Style and in general). 
+- [@thefLink](https://github.com/codewhitesec/HandleKatz): On of the best sources for learning C (PIC-Style and in general) and I used `chkstk_ms.asm` from it. 
 - [React OS](https://reactos.org/): Implementation of [ipconfig](https://doxygen.reactos.org/d3/dae/ipconfig_8c_source.html)
+
 
 
